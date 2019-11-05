@@ -2,7 +2,7 @@
   controller="ChildsComponentController"
   implements="flexipage:availableForAllPageTypes,force:hasRecordId"
 >
-  <aura:attribute name="recordId" type="String"/> // add default="0017F000009SJFG" for preview in dev mode.
+  <aura:attribute name="recordId" type="String"/>
   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
   <aura:attribute name="childList" type="List" />
   <div class="slds-card">

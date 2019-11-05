@@ -8,18 +8,15 @@
   <div class="slds-card">
     <div class="slds-card__header slds-grid">
       <h2> <span class="slds-text-heading--small">Child Auditor</span> </h2>
-    </div>
-      
-          <aura:if isTrue="{!v.childList.length == 0}">
-              <p>Record has no children</p>
-          </aura:if>
-          <ol>
-            <aura:iteration items="{!v.childList}" var="child">
-              <li>{!child.key} - {!child.value}</li>
-            </aura:iteration>
-          </ol>      
-      
-    
+    </div>      
+      <aura:if isTrue="{!v.childList.length == 0}">
+          <p>Record has no children</p>
+      </aura:if>
+      <ol>
+        <aura:iteration items="{!v.childList}" var="child">
+          <li>{!child.key} - {!child.value}</li>
+        </aura:iteration>
+      </ol>
     <lightning:button label="Refresh" onclick="{!c.doInit}" />
   </div>
 </aura:component>
